@@ -1,0 +1,19 @@
+$dark-grey: #383838;
+$default-text: #505260;
+$grey: #c5c9cc;
+$light-grey: #e1e1e1;
+$white: #FFFFFF;
+$dark-red: #c6463d;
+$dark-blue: #444d65;
+$dark-green: #00bd9b;
+$light-red: #e36767;
+$light-blue: #699ec0;
+$light-green: #a8d9cb;
+
+@import url(http://fonts.googleapis.com/css?family=Lato);
+@import "./modules/normalize";
+@import "./modules/basic";
+@import "./modules/authentication";
+@import "./modules/alerts";
+@import "./modules/todos";
+

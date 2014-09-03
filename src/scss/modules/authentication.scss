@@ -1,0 +1,71 @@
+.auth-container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 350px;
+  // min-height: 350px;
+  border: 1px solid $light-grey;
+  padding: 0 1em 1em 1em;
+  border-radius: 0.25em;
+  background: $white;
+  
+  label {
+    display: block;
+    margin-bottom: 0.25em;
+  }
+
+  .checkbox {
+    label, input {
+      display: inline;
+      width: auto;
+    }
+    label {
+      top: 1px;
+      position: relative;
+    }
+  }
+
+  .auth-button {
+    margin-top: 0.25em;
+    background: $dark-blue;
+    color: $white;
+
+    &:hover {
+      background: lighten($dark-blue, 5%);
+    }
+
+    &:active {
+      background: lighten($dark-blue, 10%);
+    }
+  }
+
+  #error_explanation {
+    h2 {
+      font-size: 16px;
+      color: $dark-red;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0.5em;
+
+      li {
+        color: $dark-red;
+        margin-bottom: 0.25em;
+      }
+    }
+  }
+
+  .field_with_errors {
+    input {
+      border: 1px solid $dark-red;
+    }
+    label {
+      color: $dark-red;
+    }
+    br {
+      display: none;
+    }
+  }
+}
