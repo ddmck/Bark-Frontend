@@ -7,6 +7,7 @@ module.exports =
     files: [
       resolve('jquery-2.1.1'),
       resolve('underscore'),
-      resolve('backbone')
+      resolve('backbone'),
+      resolve('socketio')
       ]
   }
