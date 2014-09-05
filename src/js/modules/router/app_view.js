@@ -1,7 +1,7 @@
 var TodoList = require('../todo_list/todo_list');
 var TodoListView = require('../todo_list/todo_list_view');
 var AddTodoView = require('../todo_entry/add_todo_view.js');
-var RewardImageView = require('../reward_image/reward_image_view')
+var RewardImageView = require('../reward_image/reward_image_view');
 module.exports = Backbone.View.extend({
   tagName: 'div',
   id: 'app',
