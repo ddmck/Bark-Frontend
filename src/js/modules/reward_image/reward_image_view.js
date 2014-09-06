@@ -9,14 +9,17 @@ module.exports = Backbone.View.extend({
     'click': 'removeImage'
   },
   initialize: function(){
-    vent.on('displayImage', this.render, this);
+    vent.on('displayImage', this.displayImage, this);
   },
   render: function(){
-    this.removeImage
-    this.$el.html(this.template);
+    this.$el.html('');
     return this;
   },
   removeImage: function(){
     this.$el.html('');
+  },
+  displayImage: function(){
+    this.$el.html(this.template({image: 'puppy.jpg'}))
   }
+
 })
