@@ -9,9 +9,9 @@ module.exports = Backbone.View.extend({
     this.collection.on('displayImage', this.displayImage, this);
   },
   render: function(){
-    this.collection.forEach(this.addOne, this)
+    this.collection.forEach(this.addOne, this);
     return this;
-  }, 
+  },
   addOne: function(todoItem){
     var todoView = new TodoView({model: todoItem});
     this.$el.append(todoView.render().el);
