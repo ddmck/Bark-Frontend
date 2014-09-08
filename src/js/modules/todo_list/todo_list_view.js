@@ -1,10 +1,14 @@
 var TodoView = require('./todo_view.js');
 var Vent = require('../vent/vent');
+var template = require('./todo_list.handlebars');
+
 module.exports = Backbone.View.extend({
-  tagName: 'ul',
-  className: 'todo-list',
+  tagName: 'div',
+  // className: 'todo-list',
+  template: template,
   initialize: function(){
     Vent.on('yo', this.prove, this)
+    this.$el.append(this.template());
     this.collection.on('add', this.addOne, this);
     this.collection.on('displayImage', this.displayImage, this);
   },
@@ -14,7 +18,7 @@ module.exports = Backbone.View.extend({
   },
   addOne: function(todoItem){
     var todoView = new TodoView({model: todoItem});
-    this.$el.append(todoView.render().el);
+    this.$el.find('#daily-list').append(todoView.render().el);
   },
   prove: function(){
     this.collection.fetch({update: true});

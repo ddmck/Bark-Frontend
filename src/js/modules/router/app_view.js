@@ -22,7 +22,7 @@ module.exports = Backbone.View.extend({
     
     var todoListView = new TodoListView({collection: todoList});
     todoList.fetch({update: true});
-    this.$el.find('.todos-container').append("<div class='todo-list-container'></div>");
-    this.$el.find(".todo-list-container").append(todoListView.el);
+    console.log("aboust to append todos list view");
+    this.$el.find('.todos-container').append(todoListView.el);
   }
 })
