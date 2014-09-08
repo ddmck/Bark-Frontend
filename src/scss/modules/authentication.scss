@@ -60,6 +60,7 @@
   .field_with_errors {
     input {
       border: 1px solid $dark-red;
+      width: 100%;
     }
     label {
       color: $dark-red;

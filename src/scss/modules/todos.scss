@@ -14,16 +14,37 @@
 .add-todo-container {
   width: 100%;
   padding: 1em;
+  span {
+    font-size: 1.5em;
+  }
 }
 
 .add-todo {
   form input {
+    padding-right: 0;
+    padding-left: 0; 
+    border: 0px solid $white;
+    font-style: italic;
+    font-size: 1.5em;
+    font-family: 'PT Serif', serif;
+    color: $default-text;
     &::-moz-placeholder {  /* Firefox 19+ */
-       font-style: italic;  
+       font-style: italic;
+       font-family: 'PT Serif', serif;
     }
     &::-webkit-input-placeholder {  /* Firefox 19+ */
-       font-style: italic;  
+       font-style: italic;
+       font-family: 'PT Serif', serif;
     }
+  }
+  form select {
+    font-family: 'PT Serif', serif;
+    background: #fff;
+    border: 1px solid $light-grey;
+    line-height: 1.5em;
+    font-size: 1.5em;
+    font-style: italic;
+    color: $default-text;
   }
 }
 

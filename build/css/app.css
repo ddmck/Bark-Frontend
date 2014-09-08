@@ -348,7 +348,6 @@ a {
 input {
   padding: 0.5em;
   border-radius: 0.25em;
-  width: 100%;
   margin-bottom: 0.5em;
   border: 1px solid #e1e1e1; }
 
@@ -395,7 +394,8 @@ input {
       color: #c6463d;
       margin-bottom: 0.25em; }
   .auth-container .field_with_errors input {
-    border: 1px solid #c6463d; }
+    border: 1px solid #c6463d;
+    width: 100%; }
   .auth-container .field_with_errors label {
     color: #c6463d; }
   .auth-container .field_with_errors br {
@@ -424,13 +424,33 @@ input {
 .add-todo-container {
   width: 100%;
   padding: 1em; }
+  .add-todo-container span {
+    font-size: 1.5em; }
 
-.add-todo form input::-moz-placeholder {
-  /* Firefox 19+ */
-  font-style: italic; }
-.add-todo form input::-webkit-input-placeholder {
-  /* Firefox 19+ */
-  font-style: italic; }
+.add-todo form input {
+  padding-right: 0;
+  padding-left: 0;
+  border: 0px solid #FFFFFF;
+  font-style: italic;
+  font-size: 1.5em;
+  font-family: 'PT Serif', serif;
+  color: #505260; }
+  .add-todo form input::-moz-placeholder {
+    /* Firefox 19+ */
+    font-style: italic;
+    font-family: 'PT Serif', serif; }
+  .add-todo form input::-webkit-input-placeholder {
+    /* Firefox 19+ */
+    font-style: italic;
+    font-family: 'PT Serif', serif; }
+.add-todo form select {
+  font-family: 'PT Serif', serif;
+  background: #fff;
+  border: 1px solid #e1e1e1;
+  line-height: 1.5em;
+  font-size: 1.5em;
+  font-style: italic;
+  color: #505260; }
 
 .todos-container {
   width: 100%;
