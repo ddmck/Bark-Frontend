@@ -14,7 +14,7 @@ module.exports = Backbone.View.extend({
     var recurrance = this.$el.find('select').val();
     console.log(recurrance);
     if (desc) {
-      var newTodo = new TodoItem({description: desc});
+      var newTodo = new TodoItem({description: desc, recurrance: recurrance});
       newTodo.save();
       this.collection.add(newTodo);
       this.$el.find('input').val("").focus();

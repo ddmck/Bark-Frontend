@@ -419,7 +419,8 @@ input {
   background: #699ec0; }
 
 #app {
-  position: relative; }
+  position: relative;
+  height: 100%; }
 
 .add-todo-container {
   width: 100%;
@@ -454,7 +455,17 @@ input {
 
 .todos-container {
   width: 100%;
-  max-height: calc(100% - 4em); }
+  height: calc(100% - 10em);
+  position: relative; }
+  .todos-container div .todo-list-container:first-child {
+    position: absolute;
+    left: 0%; }
+  .todos-container div .todo-list-container:nth-child(2) {
+    position: absolute;
+    left: 33%; }
+  .todos-container div .todo-list-container:nth-child(3) {
+    position: absolute;
+    left: 66%; }
 
 .todo-list-container {
   margin: 1em 0 1em 1em;
@@ -462,7 +473,10 @@ input {
   border: 1px solid #e1e1e1;
   border-radius: 0.25em;
   width: calc(33.3% - 1.33em);
-  display: inline-block; }
+  overflow-y: scroll;
+  max-height: 100%; }
+  .todo-list-container h2 {
+    margin-left: 0.75em; }
 
 ul.todo-list {
   list-style-type: none;

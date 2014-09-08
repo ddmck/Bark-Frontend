@@ -9,6 +9,7 @@
   // // padding: 1em;
   // border-radius: 0.25em;
   // // 
+  height: 100%;
 }
 
 .add-todo-container {
@@ -50,7 +51,23 @@
 
 .todos-container {
   width: 100%;
-  max-height: calc(100% - 4em);
+  height: calc(100% - 10em);
+  position: relative;
+
+  div .todo-list-container {
+    &:first-child {
+      position: absolute;
+      left: 0%
+    }
+    &:nth-child(2) {
+      position: absolute;
+      left: 33%
+    }
+    &:nth-child(3) {
+      position: absolute;
+      left: 66%
+    }
+  }
 }
 
 .todo-list-container {
@@ -59,7 +76,11 @@
   border: 1px solid $light-grey;
   border-radius: 0.25em;
   width: calc(33.3% - 1.33em);
-  display: inline-block;
+  overflow-y: scroll;
+  max-height: 100%;
+  h2 {
+    margin-left: 0.75em;
+  }
 }
 
 ul.todo-list {

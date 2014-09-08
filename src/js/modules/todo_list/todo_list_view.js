@@ -18,7 +18,8 @@ module.exports = Backbone.View.extend({
   },
   addOne: function(todoItem){
     var todoView = new TodoView({model: todoItem});
-    this.$el.find('#daily-list').append(todoView.render().el);
+    console.log(todoItem);
+    this.$el.find('#' + todoItem.get('recurrance') + '-list').append(todoView.render().el);
   },
   prove: function(){
     this.collection.fetch({update: true});
