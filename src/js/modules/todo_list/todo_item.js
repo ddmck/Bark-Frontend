@@ -10,8 +10,10 @@ module.exports = Backbone.Model.extend({
     if( this.get('completed') == false ){
       this.set('completed', true);
       vent.trigger('displayImage');
+      this.trigger('completed');
     } else {
       this.set('completed', false);
+      this.trigger('uncompleted');
     }
     this.save();
   }

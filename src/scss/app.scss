@@ -1,14 +1,14 @@
-$dark-grey: #383838;
-$default-text: #505260;
-$grey: #c5c9cc;
-$light-grey: #e1e1e1;
-$white: #FFFFFF;
-$dark-red: #c6463d;
-$dark-blue: #444d65;
-$dark-green: #00bd9b;
-$light-red: #e36767;
-$light-blue: #699ec0;
-$light-green: #a8d9cb;
+$dark-grey: #7f8c8d;
+$default-text: #ecf0f1;
+$grey: #95a5a6;
+$light-grey: #bdc3c7;
+$white: #ecf0f1;
+$dark-red: #c0392b;
+$dark-blue: #2c3e50;
+$dark-green: #27ae60;
+$light-red: #e74c3c;
+$light-blue: #34495e;
+$light-green: #2ecc71;
 
 @import url(http://fonts.googleapis.com/css?family=Lato);
 @import url(http://fonts.googleapis.com/css?family=PT+Serif:400,400italic);
@@ -17,4 +17,5 @@ $light-green: #a8d9cb;
 @import "./modules/authentication";
 @import "./modules/alerts";
 @import "./modules/todos";
+@import "./modules/reward_image";
 

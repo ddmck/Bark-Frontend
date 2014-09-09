@@ -6,7 +6,9 @@ module.exports = Backbone.View.extend({
   id: 'reward-image-container',
   template: template,
   events: {
-    'click': 'removeImage'
+    'click img': 'removeImage',
+    'click .close': 'removeImage',
+    'click .outbound': 'goToBarkBuddy'
   },
   initialize: function(){
     vent.on('displayImage', this.displayImage, this);
@@ -16,10 +18,13 @@ module.exports = Backbone.View.extend({
     return this;
   },
   removeImage: function(){
-    this.$el.html('');
+    this.$el.html('').removeClass('active');
   },
   displayImage: function(){
-    this.$el.html(this.template({image: 'puppy.jpg'}))
+    this.$el.html(this.template({image: 'puppy.jpg'})).addClass('active');
+  },
+  goToBarkBuddy: function(){
+    var win = window.open("https://barkbuddy.com", '_blank');
+    win.focus();
   }
-
 })

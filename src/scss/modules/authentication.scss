@@ -6,14 +6,26 @@
   transform: translateY(-50%);
   width: 350px;
   // min-height: 350px;
-  border: 1px solid $light-grey;
+  border: 1px solid $light-blue;
   padding: 0 1em 1em 1em;
   border-radius: 0.25em;
-  background: $white;
-  
+  background: $light-blue;
+  color: $white;
   label {
     display: block;
     margin-bottom: 0.25em;
+  }
+
+  input {
+    width: 100%;
+    color: $dark-grey;
+  }
+
+  a {
+    color: $white;
+    &:hover {
+      color: $light-grey;
+    }
   }
 
   .checkbox {

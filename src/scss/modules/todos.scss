@@ -16,6 +16,7 @@
   width: 100%;
   padding: 1em;
   span {
+    color: $white;
     font-size: 1.5em;
   }
 }
@@ -25,27 +26,38 @@
     padding-right: 0;
     padding-left: 0; 
     border: 0px solid $white;
+    border-radius: 0;
     font-style: italic;
     font-size: 1.5em;
     font-family: 'PT Serif', serif;
-    color: $default-text;
+    background: $light-blue;
+    color: $white;
+    &:focus {
+      outline: none !important;
+    }
     &::-moz-placeholder {  /* Firefox 19+ */
        font-style: italic;
        font-family: 'PT Serif', serif;
+       color: $light-grey;
     }
     &::-webkit-input-placeholder {  /* Firefox 19+ */
        font-style: italic;
        font-family: 'PT Serif', serif;
+       color: $light-grey;
     }
   }
   form select {
     font-family: 'PT Serif', serif;
-    background: #fff;
-    border: 1px solid $light-grey;
+    background: $light-blue;
+    border: 1px solid $light-blue;
     line-height: 1.5em;
     font-size: 1.5em;
     font-style: italic;
-    color: $default-text;
+    color: $light-grey;
+    border-radius: 0;
+    &:focus {
+      outline: none !important;
+    }
   }
 }
 
@@ -71,15 +83,16 @@
 }
 
 .todo-list-container {
+  background: $light-blue;
   margin: 1em 0 1em 1em;
-  background: $white;
-  border: 1px solid $light-grey;
+  border: 1px solid $light-blue;
   border-radius: 0.25em;
   width: calc(33.3% - 1.33em);
   overflow-y: scroll;
   max-height: 100%;
   h2 {
     margin-left: 0.75em;
+    color: $white;
   }
 }
 
@@ -103,15 +116,20 @@ ul.todo-list {
   p {
     position: relative;
     top: 2px;
+    color: $white;
     &.description {  
       margin-left: 1em;
+      &.completed {
+        text-decoration: line-through;
+        color: $light-grey;
+      }
     }
     &.delete {
       margin: 0;
       position: absolute;
       left: 100%;
       transform: translateX(-100%);
-      color: $light-grey;
+      color: $white;
       font-weight: bold;
       cursor: pointer;
       &:hover {

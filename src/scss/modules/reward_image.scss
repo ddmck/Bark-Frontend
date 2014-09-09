@@ -1,0 +1,90 @@
+#reward-image-container {
+  img, a.close, h2 {
+    visibility: hidden;
+  }
+  &.active {
+    transition: background 0.5s ease;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    background: rgba(0,0,0,0.9);
+    padding: 100px;
+    .compliment {
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      transform: translateX(-50%);
+      h2 {
+        visibility: visible;
+        color: $white;
+        text-align: center;
+      }
+    }
+    .outbound {
+      transition: background 0.5s ease;
+      height: 10%;
+      width: 100%;
+      background: $dark-blue;
+      position: absolute;
+      top: 90%;
+      left: 0;
+      &:hover {
+        cursor: pointer;
+      }
+      span {
+        font-size: 1.2em;
+        text-align: center;
+        color: $white;
+        line-height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+      } 
+    }
+    a.close {
+      font-weight: bold;
+      font-size: 1.5em;
+      visibility: visible;
+      height: 5%;
+      // width: 5%;
+      position: absolute;
+      left: 100%;
+      top: 0;
+      transform: translateX(-130%);
+      color: $white;
+      &:hover {
+        color: $light-red;
+        cursor: pointer;
+      }
+    }
+    img {
+      visibility: visible;
+      max-height: 75%;
+      max-width: 75%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+    video {
+      visibility: visible;
+      max-height: 80%;
+      max-width: 80%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      &:fullscreen {
+        max-height: 100%;
+        max-width: 100%;
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        transform: translateX(0%) translateY(0%);
+      }
+    }
+  }
+}
