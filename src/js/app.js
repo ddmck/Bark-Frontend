@@ -5,11 +5,11 @@ $(document).ready(function(){
   $.ajaxSetup({
     headers: {'X-CSRF-Token': tokenValue}
   });
-
+  window.userId = $('meta[name=user_id]').attr('content');
   var App = new Router();
   App.start();
   var socket = io('http://localhost:2020');
-  socket.on('updateTodos', function(thing){
+  socket.on('updateTodos/' + window.userId, function(thing){
     Vent.trigger('refreshCollection');
   });
 
